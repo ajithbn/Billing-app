@@ -3,10 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
+import configStore from './store/configStore';
+import { Provider } from 'react-redux';
 
+const store = configStore()
+console.log('store', store.getState())
+
+store.subscribe(() => {
+  console.log('updated state', store.getState())
+})
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
