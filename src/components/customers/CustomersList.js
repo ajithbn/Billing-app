@@ -67,7 +67,7 @@ const CustomersList = (props) => {
         <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
           <input
             type="search"
-            class="form-control"
+            className="form-control"
             placeholder="Search customer By Name..."
             aria-label="Search"
             value={searchBox}
@@ -75,7 +75,7 @@ const CustomersList = (props) => {
           />
         </form>
         <select
-          class="form-select form-select-sm w-25"
+          className="form-select form-select-sm w-25"
           aria-label=".form-select-sm example"
           value={orderBy}
           onChange={handleOrderChange}
@@ -85,7 +85,7 @@ const CustomersList = (props) => {
           <option value="descending">Name - Descending</option>
         </select>
 
-        <button type="button" class="btn btn-primary" onClick={togglePopup}>
+        <button type="button" className="btn btn-primary" onClick={togglePopup}>
           Add Customer
         </button>
       </div>

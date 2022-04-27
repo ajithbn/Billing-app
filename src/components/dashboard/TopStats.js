@@ -16,11 +16,11 @@ const TopStats = (props) => {
     })
     return (<div className='my-5'>
         <h2 className='my-2'>Recent 5</h2>
-        <div class="d-flex">
-            <div class="col-md-4">
-                <div class="card mx-2">
-                    <div class="card-body">
-                        <h6 class="card-subtitle text-muted">last 5 Customers</h6>
+        <div className="d-flex">
+            <div className="col-md-4">
+                <div className="card mx-2">
+                    <div className="card-body">
+                        <h6 className="card-subtitle text-muted">last 5 Customers</h6>
                         <ul>
                             {
                                 customerData.slice(-5).reverse().map((customer) => {
@@ -31,10 +31,10 @@ const TopStats = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mx-2">
-                    <div class="card-body">
-                        <h6 class="card-subtitle text-muted">last 5 Products</h6>
+            <div className="col-md-4">
+                <div className="card mx-2">
+                    <div className="card-body">
+                        <h6 className="card-subtitle text-muted">last 5 Products</h6>
                         <ul>
                             {
                                 productData.slice(-5).reverse().map((product) => {
@@ -45,10 +45,10 @@ const TopStats = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mx-2">
-                    <div class="card-body">
-                        <h6 class="card-subtitle text-muted">last 5 Bills</h6>
+            <div className="col-md-4">
+                <div className="card mx-2">
+                    <div className="card-body">
+                        <h6 className="card-subtitle text-muted">last 5 Bills</h6>
                         {billData.length > 0 ? <ul>
                             {
                                 billData.slice(-5).reverse().map((bill) => {

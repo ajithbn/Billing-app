@@ -14,14 +14,14 @@ const CustomerItem = (props) => {
     }
     return (
         <>
-            <div class="card mb-3">
-                <div class="d-flex justify-content-between p-3">
+            <div className="card mb-3">
+                <div className="d-flex justify-content-between p-3">
                     <div >
                         {customer.name} - {customer.mobile} - {customer.email}
                     </div>
                     <div >
-                        <button type="button" class="btn btn-primary" onClick={togglePopup}>Edit</button>
-                        <button type="button" class="btn btn-danger mx-3" onClick={() => handleDelete(customer._id)}>Delete</button>
+                        <button type="button" className="btn btn-primary" onClick={togglePopup}>Edit</button>
+                        <button type="button" className="btn btn-danger mx-3" onClick={() => handleDelete(customer._id)}>Delete</button>
                     </div>
                 </div>
             </div>

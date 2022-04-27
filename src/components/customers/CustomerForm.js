@@ -17,13 +17,13 @@ const CustomerForm = (props) => {
     
     return (
         <div className='popUpWrap'>
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">{ formType === 'addCustomer' ? 'Add New Customer' : 'Edit Customer'}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={togglePopup}></button>
+                <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                    <h5 className="modal-title" id="staticBackdropLabel">{ formType === 'addCustomer' ? 'Add New Customer' : 'Edit Customer'}</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={togglePopup}></button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                         <Formik
                             initialValues={{
                                 name: customerName ? customerName : '',
