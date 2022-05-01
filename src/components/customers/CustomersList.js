@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { asyncGetCustomer} from "../../actions/actions";
@@ -80,7 +80,7 @@ const CustomersList = (props) => {
           value={orderBy}
           onChange={handleOrderChange}
         >
-          <option selected="">Order Customer By</option>
+          <option defaultValue="">Order Customer By</option>
           <option value="ascending">Name- Ascending</option>
           <option value="descending">Name - Descending</option>
         </select>
@@ -100,10 +100,10 @@ const CustomersList = (props) => {
         customersIsLoading ? <div className="w-100 d-flex justify-content-center"><img src={loading} width={100} height={100} className='my-2'/></div> : (filteredData.length > 0 ? (
           (searchBox.length > 0 ? filteredData : currentPosts)
           .map((customer) => {
-            return <>
-                      <CustomerItem customer={customer} key={customer._id} />
+            return <Fragment key={customer._id}>
+                      <CustomerItem customer={customer}  />
                       
-                    </>
+                    </Fragment>
           })
         ) : (<p>No record Found</p>))
         

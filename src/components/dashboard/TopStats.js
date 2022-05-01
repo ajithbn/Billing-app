@@ -24,7 +24,7 @@ const TopStats = (props) => {
                         <ul>
                             {
                                 customerData.slice(-5).reverse().map((customer) => {
-                                    return <li>{customer.name}</li>
+                                    return <li key={customer._id}>{customer.name}</li>
                                 })
                             }
                          </ul>
@@ -38,7 +38,7 @@ const TopStats = (props) => {
                         <ul>
                             {
                                 productData.slice(-5).reverse().map((product) => {
-                                    return <li>{product.name}</li>
+                                    return <li key={product._id}>{product.name}</li>
                                 })
                             }
                          </ul>
@@ -52,7 +52,7 @@ const TopStats = (props) => {
                         {billData.length > 0 ? <ul>
                             {
                                 billData.slice(-5).reverse().map((bill) => {
-                                    return <li>{bill.date.substr(0,10)} {getCustomerinfoById(bill.customer, customerData).name} - {bill.total}</li>
+                                    return <li key={bill._id}>{bill.date.substr(0,10)} {getCustomerinfoById(bill.customer, customerData).name} - {bill.total}</li>
                                 })
                             }
                          </ul> : 'no record found'}
