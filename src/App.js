@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
 import React, { useEffect } from 'react'
 import { Route } from 'react-router-dom'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './components/NavBar';
 import Home from './components/Home'
 import Register from './components/Register'
@@ -19,6 +19,10 @@ import BillDetail from './components/Bills/BillDetail';
 
 function App() {
   const dispatch = useDispatch()
+  const loggedIn = useSelector((state) => {
+    return state.storeData
+  })
+
   useEffect(() => {
       if(localStorage.getItem('token')) {
         
@@ -27,7 +31,7 @@ function App() {
         dispatch(asyncGetProducts())
         dispatch(asyncGetBills())
       }
-  }, [])
+  }, [loggedIn.isAuthenticated])
   return (
     <div className='d-flex'>
       <div >
