@@ -18,7 +18,7 @@ This is a billing app that can be used for creating bills for a business. The bu
 - formik
 
 # Demo
-For Live Demo, Please click here: <a target="_blank" href="https://point-of-sales-billing.netlify.app/">DEMO</a>
+For Live Demo, Please click here: <a target="_blank" href="https://pos-billing-app.netlify.app/">DEMO</a>
 
 # Features
 
